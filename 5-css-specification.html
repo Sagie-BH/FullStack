@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+/* From top to bottom */
+
+/* 0.0.0.1.0   class*/ 
+.header {
+  color: purple;
+}
+/* 0.0.1.0.0    id */
+#header-id {
+  color: black;
+}
+
+/* 0.0.0.0.1   element */
+h1 {
+    color: red;
+}
+h1 {
+  color: blue;
+}
+
+.text {
+  color: green;
+}
+
+/* Any descendant of h4 with class 'info'*/
+h4 .info {
+  color:violet
+}
+
+/* 0.0.0.0.1   element */
+h4 {
+  color: red;
+}
+
+/* 0.0.0.1.0   class*/ 
+.info {
+  color: red;
+}
+
+/* 0.0.0.2.0  2 classes*/ 
+.text.info {
+  color: orange;
+}
+
+/* 0.0.0.1.1   class & element */
+body .info {
+  color: blue;
+}
+
+/* 1.0.0.1.0  important class */
+.info {
+  color: black !important;
+}
+
+
+</style>
+</head>
+<body>
+  <!-- 0.1.0.0.0   inline -->
+  <h1 id="header-id" class="header" style="color: brown;">Header</h1>
+  <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit tempore ratione neque earum, nobis dolores totam quia eos quod maiores officia reiciendis voluptate voluptatem magnam quasi, quisquam minima iusto mollitia?</p>
+  <h4 class="info text">Header-4</h4>
+</body>
+</html>

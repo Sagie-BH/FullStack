@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta data  -->
+    <!-- Metadata tags in HTML, such as "og" for Open Graph,
+        are essential for providing additional information about a web page.
+        They help platforms like Facebook, Twitter, and YouTube
+        understand and display the page effectively when shared.
+        These tags ensure accurate and attractive presentation across different platforms. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph (OG) is a metadata protocol used by social media
+        platforms to enhance the display of shared web pages.
+        By implementing Open Graph tags in the HTML of a webpage,
+        developers can control how the content appears when shared
+        on platforms like Facebook, Twitter, and LinkedIn.  -->
+    <meta property="og:title" content="Example Article">
+    <meta property="og:description" content="This is an example article about Open Graph tags.">
+    <meta property="og:image" content="https://example.com/article-image.jpg">
+    <meta property="og:url" content="https://example.com/article">
+
+    <!-- Open Graph tags for Facebook -->
+    <meta property="og:site_name" content="My Website">
+    <meta property="og:type" content="article">
+
+    <!-- Open Graph tags for Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Example Article">
+    <meta name="twitter:description" content="This is an example article about Open Graph tags.">
+    <meta name="twitter:image" content="https://example.com/article-image.jpg">
+
+    <title>Html Tricks</title>
+</head>
+
+<body>
+    <form>
+        <!-- 
+            "fieldset" tag is used to group related form elements together,
+            providing visual and semantic organization within a form.
+            It acts as a container for form fields.
+            In contrast, the HTML "form" tag defines a complete form that contains input fields,
+            buttons, and other elements,
+            allowing users to input data and submit it to a server for processing.  -->
+        <fieldset>
+            <legend>טופס שליחה</legend>
+            <div>
+                <label>פירות</label>
+                <div>
+                    <input list="fruit-list" type="text">
+                    <!-- "datalist" tag is used to provide a pre-defined list of options for an input field.
+                It allows users to select values from the list or enter their own value,
+                enhancing user experience and input accuracy. -->
+                    <datalist id="fruit-list">
+                        <option value="תפוז">
+                        <option value="תפוח">
+                        <option value="קלמנטיה">
+                        <option value="פמלה">
+                        <option value="מנגו">
+                    </datalist>
+                </div>
+            </div>
+            <div>
+                <label>משתמשים</label>
+                <div>
+                    <input list="user-list" type="text">
+                    <datalist id="user-list">
+                        <option value="אבי">
+                        <option value="דוד">
+                        <option value="דנה">
+                        <option value="נעה">
+                        <option value="יובל">
+                    </datalist>
+                </div>
+            </div>
+            <!-- 
+                Text: for general text input.
+                Color: for selecting colors.
+                Time: for selecting time values.
+                Date: for selecting dates.
+                Email: for entering email addresses.
+                Number: for entering numeric values.
+                Range: for selecting a value from a range.
+                Checkbox: for selecting multiple options.
+                Radio: for selecting a single option from multiple choices.
+                Password: for entering passwords securely.
+                File: for uploading files.
+                Submit: for submitting a form.
+                Button: for creating a clickable button.
+                Hidden: for storing values that are not displayed. -->
+            <div>
+                <input style="margin-top: 10px;" type="color">
+            </div>
+            <div>
+                <input style="margin-top: 10px;" type="time">
+            </div>
+            <div>
+                <input style="margin-top: 10px;" type="text">
+            </div>
+            <div>
+                <progress value="50" max="100"></progress>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

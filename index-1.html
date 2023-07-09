@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    div#container1 {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-columns: 20% 30% 50%;
+        grid-template-columns: 260px minmax(300px,685px) auto 190px;
+        text-align: right;
+    }
+    .container1 .item {
+
+    }
+</style>
+
+<body>
+    <header>
+        <h1>CSS Selectors Examples</h1>
+    </header>
+    <div style="width: 100px;" class="container1">
+        <div id="container1">
+            <div class="item">item1
+                <div class="item">item1
+                    <div class="item">item1
+                        <div class="item">item1</div>
+                    </div>
+                    <div class="item">item1</div>
+                </div>
+                <div class="item">item1</div>
+                <div class="item">item1</div>
+
+            </div>
+            <div class="item">item2</div>
+            <div class="item">item3</div>
+            <div class="item">item4</div>
+            <div class="item">item5</div>
+            <div class="item">item8</div>
+            <div class="item">item9</div>
+            <div class="item">item10</div>
+            <div class="item">item11</div>
+            <div class="item">item12</div>
+            <div class="item">item13</div>
+            <div class="item">item14</div>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+            <td>Row 3, Cell 3</td>
+        </tr>
+    </table>
+</body>
+
+</html>

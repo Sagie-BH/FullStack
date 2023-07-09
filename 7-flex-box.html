@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Examples</title>
+    <style>
+        @media (min-width: 468px) {
+
+            /* Media query for screens wider than 468px */
+            .container-1 {
+                display: flex;
+                /* Uncomment the following lines to see different align-items options */
+                /* align-items: flex-start; */
+                /* align-items: flex-end; */
+                /* align-items: center; */
+                /* flex-direction: column; */
+            }
+
+            .container-2 {
+                display: flex;
+                /* Uncomment the following lines to see different justify-content options */
+                /* justify-content: flex-start; */
+                /* justify-content: flex-end; */
+                /* justify-content: center; */
+                /* justify-content: space-around; */
+                justify-content: space-between;
+            }
+        }
+
+        .container-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .container-1 div,
+        .container-2 div,
+        .container-3 div {
+            border: 1px #ccc solid;
+            padding: 10px;
+        }
+
+        .box-1 {
+            flex: 2;
+            /* Flex shorthand property for flex-grow, flex-shrink, and flex-basis */
+            order: 2;
+            /* Specifies the order in which flex items are displayed */
+        }
+
+        .box-2 {
+            flex: 1;
+            order: 1;
+        }
+
+        .box-3 {
+            flex: 1;
+            order: 3;
+        }
+
+        .container-2-box {
+            flex-basis: 27%;
+            /* Specifies the initial size of the flex item */
+        }
+
+        .container-3-box {
+            flex-basis: 12%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .flex-item {
+            flex: 1 1 200px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Flexbox Examples</h2>
+    <br><br>
+    <hr /><br>
+    <h3>Example 1: Flex Container with align-items and flex-direction</h3>
+    <p>
+        The <code>align-items</code> property controls how flex items align along the cross-axis of the container. Here,
+        we have different options commented out to see the effects:<br>
+        - <code>align-items: flex-start;</code> aligns items at the start of the cross-axis.<br>
+        - <code>align-items: flex-end;</code> aligns items at the end of the cross-axis.<br>
+        - <code>align-items: center;</code> centers items along the cross-axis.<br>
+        - <code>flex-direction: column;</code> changes the main-axis to vertical.
+    </p>
+    <div class="container-1">
+        <div class="box-1">
+            <h3>Box One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="box-2">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="box-3">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+    <br><br>
+    <hr /><br>
+    <h3>Example 2: Flex Container with justify-content</h3>
+    <p>
+        The <code>justify-content</code> property determines how flex items distribute along the main-axis of the
+        container. Here, we have different options commented out to see the effects:<br>
+        - <code>justify-content: flex-start;</code> aligns items at the start of the main-axis.<br>
+        - <code>justify-content: flex-end;</code> aligns items at the end of the main-axis.<br>
+        - <code>justify-content: center;</code> centers items along the main-axis.<br>
+        - <code>justify-content: space-around;</code> evenly distributes space around items along the main-axis.<br>
+        - <code>justify-content: space-between;</code> evenly distributes space between items along the main-axis.
+    </p>
+    <div class="container-2">
+        <div class="container-2-box">
+            <h3>Box Four</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="container-2-box">
+            <h3>Box Five</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="container-2-box">
+            <h3>Box Six</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <br><br>
+    <hr /><br>
+    <h3>Example 3: Flex Container with flex-wrap</h3>
+    <p>
+        The <code>flex-wrap</code> property determines whether flex items should wrap onto multiple lines if they can't
+        fit in a single line. Here, we use <code>flex-wrap: wrap;</code> to wrap items to a new line.<br>
+        The <code>justify-content: space-between;</code> property evenly distributes the space between items along the
+        main-axis, creating a pleasing layout.
+    </p>
+    <div class="container-3">
+        <div class="container-3-box">
+            <h3>Box Seven</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Eight</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Nine</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Ten</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Eleven</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="container-3-box">
+            <h3>Box Twelve</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <br style="margin-top: 30px;"><br>
+    <hr /><br>
+    <h3>Flexbox Examples</h3>
+</body>
+
+</html>

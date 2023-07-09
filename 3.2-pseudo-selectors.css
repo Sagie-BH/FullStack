@@ -1,0 +1,69 @@
+/* Additional Pseudo Class - Hover Selector */
+a:hover {
+    color: green; /* Applies when the <a> element is being hovered */
+}
+
+/* Additional Pseudo Class - Focus Selector */
+a:focus {
+    outline: none; /* Applies when the <a> element is being focused */
+}
+
+/* Additional Pseudo Class - Active Selector */
+a:active {
+    color: red; /* Applies when the <a> element is being activated */
+}
+
+/* Additional Pseudo Class - Visited Selector */
+a:visited {
+    color: purple; /* Applies to visited <a> elements */
+}
+
+/* Additional Pseudo Class - Empty Selector */
+div:empty {
+    background-color: lightyellow; /* Applies to empty <div> elements */
+}
+
+/* Pseudo Class - First Child Selector */
+a:first-child {
+    font-weight: bold; /* Applies to first child <a> elements */
+}
+
+/* Pseudo Class - Last Child Selector */
+a:last-child {
+    text-decoration: underline; /* Applies to last child <a> elements */
+}
+
+/* Pseudo Class - Nth Child Selector */
+a:nth-child(2n) {
+    font-style: italic; /* Applies to even numbered child <a> elements */
+}
+
+/* Pseudo Class - Nth Last Child Selector */
+a:nth-last-child(3) {
+    font-size: 20px; /* Applies to third to last child <a> elements */
+}
+
+/* Pseudo Class - First Of Type Selector */
+a:first-of-type {
+    font-family: Arial; /* Applies to first <a> element of its type */
+}
+
+/* Pseudo Class - Last Of Type Selector */
+a:last-of-type {
+    font-family: Verdana; /* Applies to last <a> element of its type */
+}
+
+/* Pseudo Class - Nth Of Type Selector */
+a:nth-of-type(2n) {
+    text-align: center; /* Applies to every second <a> element of its type */
+}
+
+/* Pseudo Class - Nth Last Of Type Selector */
+a:nth-last-of-type(2) {
+    text-decoration: line-through; /* Applies to second to last <a> element of its type */
+}
+
+/* Pseudo Class - Only Of Type Selector */
+a:only-of-type {
+    background-color: lightgray; /* Applies to <a> elements that are the only element of their type */
+}

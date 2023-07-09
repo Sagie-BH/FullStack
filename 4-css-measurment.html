@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Measurement</title>
+
+<head>
+    <style>
+        /* CSS Styles */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .box {
+            width: 200px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .pros {
+            color: green;
+            margin-bottom: 1rem;
+        }
+
+        .cons {
+            color: red;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        th,
+        td {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+        }
+
+        tr td:first-child {
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Measurement Types in CSS</h1>
+        <div class="box-container">
+            <div class="box">
+                <h2>em</h2>
+                <p>Use `em` when you want to set a size relative to the font-size of its parent element. It's
+                    particularly useful for creating scalable and flexible designs.</p>
+                <p><strong>Recommended for:</strong> Font sizes, margins, padding.</p>
+            </div>
+
+            <div class="box">
+                <h2>rem</h2>
+                <p>Use `rem` when you want to set a size relative to the root (the `<html>` element) font-size. It's
+                    helpful for maintaining consistent spacing and sizing throughout the document.</p>
+                <p><strong>Recommended for:</strong> Global spacing, layout consistency.</p>
+            </div>
+
+            <div class="box">
+                <h2>px</h2>
+                <p>Use `px` when you want to set an absolute size in pixels. It provides precise control over the
+                    element's dimensions.</p>
+                <p><strong>Recommended for:</strong> Precise element dimensions, specific layout requirements.</p>
+            </div>
+
+            <div class="box">
+                <h2>Font Size in Pixels</h2>
+                <p>Using font size in pixels (`px`) sets an absolute size for text. It allows for precise control over
+                    the text size.</p>
+                <p><strong>Recommended for:</strong> Specific text sizing requirements.</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Measurement Type</th>
+                    <th>Pros</th>
+                    <th>Cons</th>
+                    <th>Use Cases</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>em</td>
+                    <td>
+                        <ul class="pros">
+                            <li>Consistent scaling</li>
+                            <li>Good for responsive layouts</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="cons">
+                            <li>Affected by nested elements</li>
+                        </ul>
+                    </td>
+                    <td>Font sizes, margins, padding</td>
+                </tr>
+                <tr>
+                    <td>rem</td>
+                    <td>
+                        <ul class="pros">
+                            <li>Easier to manage</li>
+                            <li>Unaffected by nested elements</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="cons">
+                            <li>Older browser support may vary</li>
+                        </ul>
+                    </td>
+                    <td>Global spacing, layout consistency</td>
+                </tr>
+                <tr>
+                    <td>px</td>
+                    <td>
+                        <ul class="pros">
+                            <li>Consistent and predictable sizing</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="cons">
+                            <li>Not scalable</li>
+                            <li>May cause issues on different devices or resolutions</li>
+                        </ul>
+                    </td>
+                    <td>Precise element dimensions</td>
+                </tr>
+                <tr>
+                    <td>Font Size in Pixels</td>
+                    <td>
+                        <ul class="pros">
+                            <li>Consistent and predictable text size</li>
+                            <li>Precise control over typography</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul class="cons">
+                            <li>Not scalable, text size does not adapt to different viewports</li>
+                            <li>Does not respect user preferences or accessibility settings</li>
+                        </ul>
+                    </td>
+                    <td>Specific text sizing requirements</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

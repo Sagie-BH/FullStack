@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>minmax() and clamp() Examples</title>
+    <style>
+        body {
+            padding: 40px 200px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .clamp-example {
+            width: clamp(200px, 50%, 500px);
+            height: 100px;
+            background-color: #f1f1f1;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .responsive-image {
+            width: clamp(200px, 50vw, 600px);
+            height: auto;
+        }
+
+        .responsive-font {
+            font-size: clamp(16px, 3vw, 24px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>minmax() and clamp() Examples</h1>
+    <a href="https://imjignesh.com/how-to-use-min-max-clamp/">how-to-use-min-max-clamp</a>
+    <h2>minmax()</h2>
+    <p>The <code>minmax()</code> function is especially useful for creating responsive grid layouts. It allows you to
+        define a flexible size range for grid columns or rows.</p>
+    <p>In the example below, the grid container has a minimum column width of 200px and a maximum width of 1fr
+        (fractional unit, occupies remaining space). This creates a responsive layout where the columns shrink and
+        expand based on the available space.</p>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+
+    <h2>clamp()</h2>
+    <p>The <code>clamp()</code> function is useful for defining a value within a range based on the available space. It
+        helps create flexible and responsive designs.</p>
+    <p>In the example below, the width of the resizable box is set to <code>clamp(200px, 50%, 500px)</code>. This means
+        that the box will take up 50% of the available space, but it won't shrink below 200px or exceed 500px.</p>
+    <div class="clamp-example">Resizable Box</div>
+
+    <h2>Additional Examples</h2>
+
+    <h3>Responsive Images</h3>
+    <p>The <code>clamp()</code> function can be used to create responsive images that adapt to different screen sizes.
+        By specifying a range of acceptable values, you can control the size of the image based on available space.</p>
+    <img src="minmax-and-clamp-jpg.webp" alt="Responsive Image" class="responsive-image">
+
+    <h3>Responsive Fonts</h3>
+    <p>With <code>clamp()</code>, you can create responsive typography that scales based on the viewport size. This
+        helps maintain optimal readability across different devices and screen resolutions.</p>
+    <p class="responsive-font">Responsive Font Example</p>
+</body>
+
+</html>

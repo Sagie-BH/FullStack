@@ -1,0 +1,90 @@
+
+
+/* Universal Selector */ 
+* {
+    color: red; /* Applies to all elements */
+}
+
+/* Type Selector */
+div {
+    color: blue; /* Applies to all <div> elements */
+}
+
+a {
+    color: purple; /* Applies to <a> elements */
+}
+
+/* Class Selector */
+.c {
+    color: green; /* Applies to elements with class "c" */
+}
+
+/* Id Selector */
+#i {
+    color: orange; /* Applies to elements with id "i" */
+}
+
+/* Combination Selector */
+div.c {
+    color: teal; /* Applies to <div> elements with class "c" */
+}
+
+/* Descendant Selector */
+div a {
+    color: purple; /* Applies to <a> elements that are descendants of <div> elements */
+}
+
+/* Direct Child Selector */
+div > a {
+    color: pink; /* Applies to <a> elements that are direct children of <div> elements */
+}
+
+/* General Sibling Selector */
+div ~ a {
+    color: brown; /* Applies to <a> elements that are siblings coming after <div> elements */
+}
+
+/* Adjacent Sibling Selector */
+div + a {
+    color: gray; /* Applies to <a> elements that are siblings directly following <div> elements */
+}
+
+/* Or Selector */
+div, a {
+    color: black; /* Applies to <div> and <a> elements */
+}
+
+/* Attribute Selector - Has Attribute */
+[a] {
+    color: yellow; /* Applies to elements that have the attribute */
+}
+
+/* Attribute Selector - Exact Attribute */
+[a="1"] {
+    color: lime; /* Applies to elements with the exact attribute value */
+}
+
+/* Attribute Selector - Begins With Attribute */
+[a^="1"] {
+    color: cyan; /* Applies to elements with an attribute value that starts with the specified value */
+}
+
+/* Attribute Selector - Ends With Attribute */
+[a$="1"] {
+    color: magenta; /* Applies to elements with an attribute value that ends with the specified value */
+}
+
+/* Attribute Selector - Substring Attribute */
+[a*="1"] {
+    color: brown; /* Applies to elements with an attribute value that contains the specified value */
+}
+
+/* Pseudo Class - Not Selector */
+a:not(.c) {
+    text-shadow: 2px 2px 4px #000000; /* Applies to <a> elements that do not have class "c" */
+}
+
+/* Pseudo Class - Only Child Selector */
+a:only-child {
+    text-transform: uppercase; /* Applies to <a> elements that are the only child */
+}

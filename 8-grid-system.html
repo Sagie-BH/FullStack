@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    /* The grid container: this sets the element to become a grid */
+    .grid-container {
+        display: grid;
+        /* Specifies the width of the column tracks */
+        grid-template-columns: auto auto auto;
+        /* Specifies the width of the row tracks */
+        grid-template-rows: auto auto;
+        /* Specifies the space between the grid cells */
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    /* Individual grid item */
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* Showcasing the use of grid-column and grid-row */
+    .grid-item2 {
+        /* Specifies where to start and end the item in the grid column-wise */
+        grid-column: 1 / 3;
+        /* Specifies where to start and end the item in the grid row-wise */
+        grid-row: 1 / 2;
+    }
+    </style>
+</head>
+<body>
+
+<h1>The CSS Grid System</h1>
+
+<p>The CSS grid system is a powerful tool for creating responsive, fluid layouts. It allows for fine-grained control over both rows and columns, making it ideal for complex web design projects.</p>
+
+<div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>  
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>  
+</div>
+
+<p>In the above example, we created a simple 3x2 grid using 'grid-template-columns' and 'grid-template-rows' to specify the number and size of our columns and rows respectively. We also used 'gap' to specify the space between the grid cells.</p>
+
+<h2>Spanning Across Rows and Columns</h2>
+
+<p>With the CSS Grid System, we can also span our items across multiple rows and columns using 'grid-row' and 'grid-column' respectively. This is illustrated in the example below:</p>
+
+<div class="grid-container">
+    <div class="grid-item grid-item2">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>  
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>  
+</div>
+
+<p>In the above example, the first grid item spans across two columns and one row. This is achieved by using 'grid-column: 1 / 3;' and 'grid-row: 1 / 2;' respectively.</p>
+
+</body>
+</html>

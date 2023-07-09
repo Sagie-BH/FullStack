@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 20px 0;
+        }
+       body {
+            padding: 2rem 4rem;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 4rem;
+        }
+        /* Start a new counter scope */
+        .grid-container,
+        .grid-container2,
+        .grid-container3 {
+            counter-reset: grid-item;
+            gap: 20px;
+            padding: clamp(10px, 5vw, 20px);
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: clamp(4px, 2vw, 24px);
+            font-size: min(max(2rem, 4vw), 22px);
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        /* Increment the counter and add the counter value before each grid item */
+        .grid-item::before {
+            counter-increment: grid-item;
+            content: counter(grid-item);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-template-rows: auto auto;
+        }
+
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: minmax(50%, 2fr) 1fr;
+            grid-template-rows: auto auto;
+        }
+
+        .grid-container3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: minmax(100px, auto);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>The CSS Grid System</h1>
+
+    <p>The CSS grid system is a powerful tool for creating responsive, fluid layouts. It allows for fine-grained control
+        over both rows and columns, making it ideal for complex web design projects.</p>
+
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+    <p>In the above example, we have used the 'minmax()' function in 'grid-template-columns' to create a responsive
+        grid. The grid items will adjust their widths to fit the viewport. Each column will be at least 100px wide. As
+        the viewport expands, the number of columns will increase and their widths will be distributed evenly.</p>
+
+    <h2>Different Layouts</h2>
+
+    <p>We can also create different layouts with the CSS Grid System. For instance, we can have two columns where the
+        first column is twice as wide as the second one.</p>
+
+    <div class="grid-container2">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+    <p>In the 'grid-container2', we have used the 'minmax()' function in 'grid-template-columns' to ensure that the
+        first column will be no smaller than 50% of the viewport width and no larger than 2fr. This creates a layout
+        where the first column is responsive and can be twice as wide as the second column.</p>
+
+    <h2>Minimum and Maximum Size</h2>
+
+    <p>With the CSS Grid System, we can specify the minimum and maximum size of grid tracks and items. For instance, we
+        can have a row that is no smaller than 100px and grows as needed.</p>
+
+    <div class="grid-container3">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+
+    <p>In the 'grid-container3', we have used the 'minmax()' function in 'grid-template-rows' to specify that the row
+        will be no smaller than 100px and will grow as needed. This ensures that the grid items have enough room to
+        display their content and can adjust their heights based on the content.</p>
+
+</body>
+
+</html>

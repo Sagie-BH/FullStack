@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* Default element style  0.0.0.0.0.1 */
+    /* 0.0.0.0.1 */
+    h1 {
+        color: green;
+    }
+    /* 0.0.1.0.0 */
+    #header-id {
+        color: blue;
+    }
+
+    /* 0.0.0.1.0 */
+    .header {
+        color: red;
+    }
+
+    /* 0.0.0.1.0 */
+    .header {
+        color: yellow;
+    }
+
+    /* 1.0.0.0.1 */
+    body h1 {
+        color: black !important;
+    }
+    
+    /* 0.0.0.0.3 */
+    body > div > h3 {
+        color: red;
+    }
+
+    /* 1.0.0.0.2 */
+    div > h3 {
+        color: blue !important;
+    }
+</style>
+<!-- 0.1.0.0.0 -->
+<body>
+    <div>
+        <h1 id="header-id" class="header" style="color: purple;">Header</h1>
+    </div>
+    <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit tempore ratione neque earum,
+        nobis dolores totam quia eos quod maiores officia reiciendis voluptate voluptatem magnam quasi, quisquam minima
+        iusto mollitia?</p>
+    <h4 class="info text">Header-4</h4>
+    <div>
+        <h3>
+            Header-3
+        </h3>
+    </div>
+</body>
+
+</html>

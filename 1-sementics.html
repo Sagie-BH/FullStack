@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semantic and Non-Semantic Elements</title>
+    <style>
+        * {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        body {
+            padding: 0 48px;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            display: flex;
+            justify-content: center;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .li {
+            display: list-item;
+            text-align: match-parent;
+        }
+
+        .nav {
+            display: block;
+        }
+
+        .ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        .header {
+            display: block;
+        }
+
+
+        .p {
+            display: block;
+        }
+
+        .h1 {
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .h3 {
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .example-grid {
+            display: flex;
+            padding: 0 20px;
+            gap: 10%;
+        }
+
+        .example-content {
+            border: 1px solid;
+            padding: 2rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        .box {
+            background-color: #ffffff;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Semantic and Non-Semantic Elements</h1>
+    <p>
+        HTML provides both semantic and non-semantic elements. Semantic elements carry meaning and describe the
+        structure of the content, while non-semantic elements are used for layout or styling purposes.
+    </p>
+
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;header&gt;</td>
+            <td>Semantic</td>
+            <td>Represents a container for introductory content or a set of navigational links.</td>
+        </tr>
+        <tr>
+            <td>&lt;nav&gt;</td>
+            <td>Semantic</td>
+            <td>Defines a section of navigation links.</td>
+        </tr>
+        <tr>
+            <td>&lt;main&gt;</td>
+            <td>Semantic</td>
+            <td>Represents the main content of the document.</td>
+        </tr>
+        <tr>
+            <td>&lt;section&gt;</td>
+            <td>Semantic</td>
+            <td>Defines a section of content that is thematically related.</td>
+        </tr>
+        <tr>
+            <td>&lt;article&gt;</td>
+            <td>Semantic</td>
+            <td>Represents a self-contained composition in a document.</td>
+        </tr>
+        <tr>
+            <td>&lt;aside&gt;</td>
+            <td>Semantic</td>
+            <td>Defines content that is tangentially related to the main content.</td>
+        </tr>
+        <tr>
+            <td>&lt;footer&gt;</td>
+            <td>Semantic</td>
+            <td>Represents a container for the footer of a document or a section.</td>
+        </tr>
+        <tr>
+            <td>&lt;div&gt;</td>
+            <td>Non-Semantic</td>
+            <td>Represents a generic container for flow content and does not carry any specific meaning.</td>
+        </tr>
+        <tr>
+            <td>&lt;span&gt;</td>
+            <td>Non-Semantic</td>
+            <td>Represents a small, inline container for phrasing content and does not carry any specific meaning.</td>
+        </tr>
+    </table>
+    <br><br><br><br>
+    <div class="example-grid">
+        <!-- Semantic -->
+        <div class="example-content">
+            <h2>Example of Using Semantic Elements</h2>
+            <header>
+                <h1>Website Title</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <section>
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor efficitur lorem, nec
+                        scelerisque sem vestibulum in.</p>
+                </section>
+
+                <article>
+                    <h2>Service 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl hendrerit, consequat
+                        sem a, consequat justo.</p>
+                </article>
+
+                <article>
+                    <h2>Service 2</h2>
+                    <p>Nulla facilisi. Sed scelerisque nulla in nibh hendrerit, ut bibendum est facilisis. Sed ac
+                        consequat mauris.</p>
+                </article>
+            </main>
+
+            <aside>
+                <h3>Latest News</h3>
+                <ul>
+                    <li>News 1</li>
+                    <li>News 2</li>
+                    <li>News 3</li>
+                </ul>
+            </aside>
+
+            <footer>
+                <p>&copy; 2023 Company Name. All rights reserved.</p>
+            </footer>
+        </div>
+        <!-- Styled div -->
+        <div class="example-content">
+            <div class="h2">Example of Using Non Semantic Elements</div>
+            <div class="h60">
+                <div class="h1">Website Title</div>
+                <div class="nav">
+                    <div class="ul">
+                        <div class="li"><a href="#">Home</a></div>
+                        <div class="li"><a href="#">About</a></div>
+                        <div class="li"><a href="#">Services</a></div>
+                        <div class="li"><a href="#">Contact</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="section">
+                    <div class="h2">About Us</div>
+                    <div class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor efficitur lorem,
+                        nec scelerisque sem vestibulum in.</div>
+                </div>
+
+                <div class="article">
+                    <div class="h2">Service 1</div>
+                    <div class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl
+                        hendrerit, consequat sem a, consequat justo.</div>
+                </div>
+
+                <div class="article">
+                    <div class="h2">Service 2</div>
+                    <div class="p">Nulla facilisi. Sed scelerisque nulla in nibh hendrerit, ut bibendum est facilisis.
+                        Sed ac consequat mauris.</div>
+                </div>
+            </div>
+
+            <div>
+                <div class="h3">Latest News</div>
+                <div class="ul">
+                    <div class="li">News 1</div>
+                    <div class="li">News 2</div>
+                    <div class="li">News 3</div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="p">&copy; 2023 Company Name. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="box">
+                <h1>Heading 1</h1>
+                <p>This is an example of a modern HTML page design with shadows, flex display, and important SEO tags.
+                </p>
+                <img src="your-image.jpg" alt="Description of your image.">
+                <a href="https://www.example.com" target="_blank">Visit Example.com</a>
+                <ul>
+                    <li>List item 1</li>
+                    <li>List item 2</li>
+                    <li>List item 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Important SEO tags -->
+        <!-- <meta name="description" content="Your page description goes here.">
+        <title>Your Page Title</title>
+        <meta name="keywords" content="keyword1, keyword2, keyword3">
+        <meta name="author" content="Your Name">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://www.yourwebsite.com/your-page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#ffffff"> -->
+
+        <!-- Explanation of the importance of semantic HTML -->
+        <div class="container">
+            <div class="box">
+                <h2>Why Semantic HTML is Important for SEO and Webpage Structure</h2>
+                <p>Semantic HTML tags provide meaning and structure to your web page, which is essential for both search
+                    engines and human visitors. Here's why using semantic HTML is important:</p>
+                <ul>
+                    <li><strong>Search Engine Optimization (SEO):</strong> Search engines rely on the structure and
+                        semantic meaning of HTML tags to understand and index your content accurately. By using
+                        appropriate tags, such as headings, paragraphs, lists, and anchor tags, you provide context to
+                        search engines about the content and improve its visibility in search results.</li>
+                    <li><strong>Improved Accessibility:</strong> Semantic HTML tags enhance the accessibility of your
+                        web page by providing a clear structure that can be easily understood by screen readers and
+                        assistive technologies. This ensures that all users, including those with disabilities, can
+                        navigate and comprehend your content.</li>
+                    <li><strong>Readability and User Experience:</strong> Semantic HTML improves the readability and
+                        user experience of your web page. Properly structured content with headings, paragraphs, and
+                        lists allows users to scan and understand your page more easily. It also helps with content
+                        organization and logical flow.</li>
+                    <li><strong>Maintainable and Future-Proof Code:</strong> Semantic HTML promotes cleaner and more
+                        maintainable code. It separates the structure and presentation of your page, making it easier to
+                        update and modify the styles without affecting the underlying content and meaning.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

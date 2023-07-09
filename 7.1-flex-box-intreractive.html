@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Examples</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .flex-item {
+      flex: 1 1 200px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      background-color: #f1f1f1;
+    }
+
+    .flex-container.row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    .flex-container.column {
+      flex-direction: column;
+    }
+
+    .flex-container.column-reverse {
+      flex-direction: column-reverse;
+    }
+
+    .flex-container.no-wrap {
+      flex-wrap: nowrap;
+    }
+
+    .flex-container.wrap {
+      flex-wrap: wrap;
+    }
+
+    .flex-container.wrap-reverse {
+      flex-wrap: wrap-reverse;
+    }
+
+    .flex-container.justify-start {
+      justify-content: flex-start;
+    }
+
+    .flex-container.justify-end {
+      justify-content: flex-end;
+    }
+
+    .flex-container.justify-center {
+      justify-content: center;
+    }
+
+    .flex-container.justify-space-between {
+      justify-content: space-between;
+    }
+
+    .flex-container.justify-space-around {
+      justify-content: space-around;
+    }
+
+    .flex-container.justify-space-evenly {
+      justify-content: space-evenly;
+    }
+
+    .flex-container.align-start {
+      align-items: flex-start;
+    }
+
+    .flex-container.align-end {
+      align-items: flex-end;
+    }
+
+    .flex-container.align-center {
+      align-items: center;
+    }
+
+    .flex-container.align-baseline {
+      align-items: baseline;
+    }
+
+    .flex-container.align-stretch {
+      align-items: stretch;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flexbox Examples</h1>
+
+  <!-- Flex Direction -->
+  <div class="flex-container">
+    <div class="flex-item" onclick="applyAttribute('row')">Flex Direction: Row</div>
+    <div class="flex-item" onclick="applyAttribute('row-reverse')">Flex Direction: Row Reverse</div>
+    <div class="flex-item" onclick="applyAttribute('column')">Flex Direction: Column</div>
+    <div class="flex-item" onclick="applyAttribute('column-reverse')">Flex Direction: Column Reverse</div>
+  </div>
+
+  <!-- Flex Wrap -->
+  <div class="flex-container">
+    <div class="flex-item" onclick="applyAttribute('no-wrap')">Flex Wrap: No Wrap</div>
+    <div class="flex-item" onclick="applyAttribute('wrap')">Flex Wrap: Wrap</div>
+    <div class="flex-item" onclick="applyAttribute('wrap-reverse')">Flex Wrap: Wrap Reverse</div>
+  </div>
+
+  <!-- Justify Content -->
+  <div class="flex-container">
+    <div class="flex-item" onclick="applyAttribute('justify-start')">Justify Content: Flex Start</div>
+    <div class="flex-item" onclick="applyAttribute('justify-end')">Justify Content: Flex End</div>
+    <div class="flex-item" onclick="applyAttribute('justify-center')">Justify Content: Center</div>
+    <div class="flex-item" onclick="applyAttribute('justify-space-between')">Justify Content: Space Between</div>
+    <div class="flex-item" onclick="applyAttribute('justify-space-around')">Justify Content: Space Around</div>
+    <div class="flex-item" onclick="applyAttribute('justify-space-evenly')">Justify Content: Space Evenly</div>
+  </div>
+
+  <!-- Align Items -->
+  <div class="flex-container">
+    <div class="flex-item" onclick="applyAttribute('align-start')">Align Items: Flex Start</div>
+    <div class="flex-item" onclick="applyAttribute('align-end')">Align Items: Flex End</div>
+    <div class="flex-item" onclick="applyAttribute('align-center')">Align Items: Center</div>
+    <div class="flex-item" onclick="applyAttribute('align-baseline')">Align Items: Baseline</div>
+    <div class="flex-item" onclick="applyAttribute('align-stretch')">Align Items: Stretch</div>
+  </div>
+
+  <script>
+    function applyAttribute(attribute) {
+      const flexContainer = document.getElementsByClassName('flex-container')[0];
+      flexContainer.className = 'flex-container'; // Reset all classes
+
+      switch (attribute) {
+        case 'row':
+        case 'row-reverse':
+        case 'column':
+        case 'column-reverse':
+          flexContainer.classList.add(attribute);
+          break;
+        case 'no-wrap':
+        case 'wrap':
+        case 'wrap-reverse':
+          flexContainer.classList.add(attribute);
+          break;
+        case 'justify-start':
+        case 'justify-end':
+        case 'justify-center':
+        case 'justify-space-between':
+        case 'justify-space-around':
+        case 'justify-space-evenly':
+          flexContainer.classList.add(attribute);
+          break;
+        case 'align-start':
+        case 'align-end':
+        case 'align-center':
+        case 'align-baseline':
+        case 'align-stretch':
+          flexContainer.classList.add(attribute);
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="3.1-basic-selectors.css">
+    <!-- <link rel="stylesheet" href="3.2-pseudo-selectors.css"> -->
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Examples</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Universal Selector</h2>
+      <div>div</div>
+      <a href="#">a</a>
+      <b>b</b>
+      <c>c</c>
+      <d>d</d>
+    </section>
+
+    <section>
+      <h2>Type Selector</h2>
+      <div class="type-selector">div</div>
+    </section>
+
+    <section>
+      <h2>Class Selector</h2>
+      <div class="class-selector">div</div>
+    </section>
+
+    <section>
+      <h2>ID Selector</h2>
+      <div id="id-selector">div</div>
+    </section>
+
+    <section>
+      <h2>Descendant Selector</h2>
+      <div>
+        <a href="#">a</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Direct Child Selector</h2>
+      <div>
+        <a href="#">a</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>General Sibling Selector</h2>
+      <div>div</div>
+      <a href="#">a</a>
+    </section>
+
+    <section>
+      <h2>Adjacent Sibling Selector</h2>
+      <div>div</div>
+      <a href="#">a</a>
+    </section>
+
+    <section>
+      <h2>Or Selector</h2>
+      <div>div</div>
+      <a href="#">a</a>
+    </section>
+
+    <section>
+      <h2>Combination Selector</h2>
+      <div class="combination-selector">div</div>
+    </section>
+
+    <section>
+      <h2>Attribute Selector - Has Attribute</h2>
+      <div class="attribute-selector" a>div</div>
+    </section>
+
+    <section>
+      <h2>Attribute Selector - Exact Attribute</h2>
+      <div class="attribute-selector" a="1">div</div>
+    </section>
+
+    <section>
+      <h2>Attribute Selector - Begins With Attribute</h2>
+      <div class="attribute-selector" a^="1">div</div>
+    </section>
+
+    <section>
+      <h2>Attribute Selector - Ends With Attribute</h2>
+      <div class="attribute-selector" a$="1">div</div>
+    </section>
+
+    <section>
+      <h2>Attribute Selector - Substring Attribute</h2>
+      <div class="attribute-selector" a*="1">div</div>
+    </section>
+
+    <section>
+      <h2>Pseudo Element - Before Selector</h2>
+      <div class="pseudo-element">div</div>
+    </section>
+
+    <section>
+      <h2>Pseudo Element - After Selector</h2>
+      <div class="pseudo-element">div</div>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Hover Selector</h2>
+      <button class="pseudo-class">button</button>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Focus Selector</h2>
+      <button class="pseudo-class">button</button>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Required Selector</h2>
+      <input type="text" class="pseudo-class" required>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Checked Selector</h2>
+      <input type="checkbox" class="pseudo-class" checked>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Disabled Selector</h2>
+      <input type="text" class="pseudo-class" disabled>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - First Child Selector</h2>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Last Child Selector</h2>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Nth Child Selector</h2>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Nth Last Child Selector</h2>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Only Child Selector</h2>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - First Of Type Selector</h2>
+      <a class="pseudo-class">a</a>
+      <b class="pseudo-class">b</b>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Last Of Type Selector</h2>
+      <a class="pseudo-class">a</a>
+      <b class="pseudo-class">b</b>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Nth Of Type Selector</h2>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Nth Last Of Type Selector</h2>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Only Of Type Selector</h2>
+      <a class="pseudo-class">a</a>
+    </section>
+
+    <section>
+      <h2>Pseudo Class - Not Selector</h2>
+      <a class="pseudo-class">a</a>
+      <a class="pseudo-class not-selector">a</a>
+    </section>
+  </main>
+</body>
+</html>
