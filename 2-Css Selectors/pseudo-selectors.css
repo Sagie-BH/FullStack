@@ -1,3 +1,27 @@
+/*
+In CSS, pseudo-classes and pseudo-elements are called "pseudo"
+because they're not real classes or elements in the HTML markup. 
+They are used to style certain parts of an HTML element, 
+or to apply styles in specific scenarios.
+
+1. Pseudo-classes: A pseudo-class is a keyword added to 
+selectors that specifies a special state of the selected elements.
+ For instance, `:hover` can be used to change a button's color when the user's pointer hovers over it.
+
+2. Pseudo-elements: A pseudo-element is a keyword 
+added to a selector that lets you style a specific part of the selected element(s).
+They can be used for decoration (`::before` and `::after`),
+or to add a certain effect or layout to an element. 
+
+For example, you might use the `::first-line` pseudo-element to style the first line of a paragraph.
+
+In summary, the "pseudo" in pseudo-class and pseudo-element 
+reflects their ability to select and style things 
+that are not explicitly present in the document's HTML. 
+They let you apply styles in more complex patterns than would be possible 
+by just selecting existing elements by tag, class, or id.*/
+
+
 /* Additional Pseudo Class - Hover Selector */
 a:hover {
     color: green; /* Applies when the <a> element is being hovered */
