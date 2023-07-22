@@ -45,3 +45,30 @@ val1 = s1.substring(0, 5); // מחלץ חלק מהמחרוזת (מהאינדקס
 
 // חלק למערך
 val1 = s1.split(''); // מחלק את המחרוזת למערך של תווים יחידים
+
+let num1 = 5;
+let str1 = "10";
+
+let result = num1 + str1;
+console.log(result); // "510" - התוכן של המחרוזת מתווסף למחרוזת מצד שמאל
+
+result = num1 * str1;
+console.log(result); // 50 - המחרוזת מתווספת כמספר מצד שמאל והכפל מתבצע
+
+result = num1 - str1;
+console.log(result); // -5 - כאשר יש מינוס לפני המחרוזת, היא מתבצעת כמספר שלילי
+
+result = num1 / str1;
+console.log(result); // 0.5 - המחרוזת מתווספת כמספר מצד שמאל והחילוק מתבצע
+
+result = num1 % str1;
+console.log(result); // 5 - מודולו (המודולוס) מחזיר את השארית מהחילוק
+
+result = num1 + parseInt(str1);
+console.log(result); // 15 - הפעולה parseInt ממירה את המחרוזת למספר שלם ואז החיבור מתבצע
+
+result = num1 + parseFloat(str1);
+console.log(result); // 15 - הפעולה parseFloat ממירה את המחרוזת למספר עשרוני ואז החיבור מתבצע
+
+let numstr = +str1
+console.log(++numstr) // 11

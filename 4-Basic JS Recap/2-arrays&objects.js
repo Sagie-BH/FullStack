@@ -13,6 +13,16 @@ fruits1[4] = 'blueberries'; // מוסיף 'blueberries' באינדקס 4
 // הוסף ערך באמצעות push()
 fruits1.push('strawberries'); // מוסיף 'strawberries' לסוף המערך
 
+/*
+shift() and unshift() in JavaScript,
+which add/remove elements at the beginning of an array,
+can be less efficient than push() and pop(),
+which operate at the end. 
+This is due to the need to re-index all elements in the array with shift() and unshift(). 
+Use shift() or unshift() when clarity or convenience is more important than performance,
+especially for smaller arrays or non-critical code.
+ */
+
 // הוסף לתחילה
 fruits1.unshift('mangos'); // מוסיף 'mangos' לתחילת המערך
 
@@ -76,7 +86,7 @@ console.log(todos1[1].text); // מציג 'Dinner with wife'
 console.log(JSON.stringify(todos1)); // ממיר את מערך 'todos1' למחרוזת JSON
 
 
-// לולאות
+/* לולאות */
 
 // לולאת For
 for (let i1 = 0; i1 <= 10; i1++) {

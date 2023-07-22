@@ -1,10 +1,10 @@
 function calculator() {
     const buttons = {
-      "decimal": document.getElementById('calc-decimal'),
-      "clear": document.getElementById('calc-clear'),
-      "backspace": document.getElementById('calc-backspace')
+      decimal: document.getElementById('calc-decimal'),
+      clear: document.getElementById('calc-clear'),
+      backspace: document.getElementById('calc-backspace')
     };
-  
+
     const displayValElement = document.getElementById('calc-display-val');
   
     let displayVal = '0';
