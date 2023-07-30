@@ -18,6 +18,7 @@ rollDices = () => {
     rollDice(diceOne);
     rollDice(diceTwo);
 }
+
 addRow = (message) =>
     resultTable.innerHTML += `<tr>` +
     `<td>${message}</td>` +

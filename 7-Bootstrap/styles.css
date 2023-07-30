@@ -1,0 +1,155 @@
+.form-check {
+    width: 255px;
+    white-space: nowrap;
+}
+
+#isActive {
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+.userInput:hover {
+    background-color: rgba(121, 227, 253, 0.185);
+}
+
+.form-control {
+    width: 250px;
+}
+
+#display-div {
+    padding-left: 5px;
+}
+
+#courses-selection {
+    margin-top: 10px;
+    width: 25px;
+}
+
+#input-container {
+    padding-left: 10px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#objGrade {
+    margin-top: 20px;
+}
+
+#inputDate {
+    /* width: 255px; */
+    margin-top: 20px;
+}
+
+
+/* .invalid{
+    background-color: rgba(red, 0, 0, .1);
+} */
+
+th,
+td,
+p,
+input,
+h3 {
+    font: 15px 'Segoe UI';
+}
+
+table,
+th,
+td {
+    border: solid 1px #ddd;
+    border-collapse: collapse;
+    padding: 2px 3px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+.mybtn {
+    width: 150px;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.my-btn-start {
+    color: white;
+    background-color: #007bff;
+}
+
+.my-btn-start:hover {
+    background-color: #036ad8;
+}
+
+.myDangerStyle {
+    color: white;
+    background-color: #dc3545;
+    /* background-image: none; */
+}
+
+.myDangerStyle:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.my-btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #d9ffe2;
+}
+
+#objDataTable {
+    margin-top: 30px;
+    padding: 5px;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    #courses-selection {
+        margin-top: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    #courses-selection {
+        margin-top: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .needs-validation {
+        text-align: center;
+        text-align: -webkit-center;
+    }
+    #courses-selection {
+        margin-top: 15px;
+    }
+    #objGrade {
+        margin-top: 30px;
+    }
+    .form-check {
+        margin-top: 15px;
+    }
+    .btn {
+        margin-top: 20px;
+    }
+}

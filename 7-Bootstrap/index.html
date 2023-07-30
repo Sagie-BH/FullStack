@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- The following link includes the Bootstrap 4.5.0 CSS styles from a CDN -->
+    <!-- The integrity attribute ensures that the file is delivered without being tampered with -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="optimized-script.js" defer></script>
+
+    <title>Bootstrap Json</title>
+</head>
+
+<body>
+    <!-- Bootstrap Grid Layout -->
+    <div>
+        <!--container-fluid: This is a responsive, fixed-width container, 
+            meaning it’s always horizontally centered on the page.
+            It's responsive in that it adjusts to the width of the device screen.
+            Its max-width changes at different breakpoints.-->
+        <div class="container-fluid">
+            <!-- Welcome Section -->
+            <!--row: This class is used to create horizontal groups of columns. 
+                Rows are wrappers for columns. 
+                In a layout, a row has 12 columns.-->
+            <div class="row welcome text-center">
+                <!-- The 'col-12' class means the content will take up the entire width on all screen sizes -->
+                <div class="col-12">
+                    <h1 class="display-4">Bootstrap => Json</h1>
+                </div>
+                <hr>
+                <div class="col-12">
+                    <p class="lead">
+                        Json Object To Bootstrap Grid
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <!-- Two-column layout using Bootstrap's grid system -->
+        <div class="row" id="display-div">
+            <!-- First Column: Input Form -->
+            <div id='input-container' class="col-lg-4">
+                <!-- Form with Bootstrap classes -->
+                <!--needs-validation: This class is used in combination with HTML form 
+                    validation to style the form based on the validity of form fields.-->
+                <form class="needs-validation col-lg-4 col-md-12 offset-xl-3 offset-lg-2" id="validateForm"
+                    novalidate onsubmit="return false">
+                    <!--col-12, col-lg-4, col-md-4: These are classes for columns,
+                    used to specify how many columns a section should span across. 
+                    The number after "col-" indicates how many columns out of 12 
+                    the content should take up. For instance, col-12 means the 
+                    content will take up all 12 columns (the entire width) on all screen sizes.
+                    col-lg-4 means the content will take up 4 columns when the screen 
+                    size is large (lg stands for large). 
+                    The classes md and lg stand for medium and large devices respectively.-->
+                    <!-- Align form elements vertically -->
+                    <div class="row align-items-center">
+
+                        <!-- ID Input -->
+                        <!-- form-group: This is a class for easier layout of form controls. 
+                            Form groups wrap their controls and labels, 
+                            providing optimum spacing. 
+                            This class ensures proper spacing between your form controls and their labels.-->
+                        <div class="form-group col-10 col-sm-6 col-md-4 col-lg-12">
+                            <!-- Label for the ID Input -->
+                            <label for="objId" class="control-label">ID</label>
+                            <!-- Input element for ID with Bootstrap styles -->
+                            <!--form-control: This class is applied to an input field or select list 
+                                to take on full-width (100% of its parent) and includes padding for better appearance.-->
+                            <input class="form-control userInput" type="text" id="objId" placeholder="ID" />
+                            <!--valid-feedback and invalid-feedback: These are classes used for providing feedback on input fields.
+                                 They indicate whether the data entered into the field is valid or not.-->
+                            <!-- Validation feedback for when the input is valid -->
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <!-- Validation feedback for when the input is invalid -->
+                            <div class="invalid-feedback">
+                                Please submit a valid ID.
+                            </div>
+                        </div>
+
+                        <!-- Full Name Input -->
+                        <div class="form-group col-10 col-sm-6 col-md-4 col-lg-12">
+                            <!-- Label for the Full Name Input -->
+                            <label for="objName" class="control-label">Full Name</label>
+                            <!-- Input element for Full Name with Bootstrap styles -->
+                            <input class="form-control userInput" type="text" id="objName"
+                                placeholder="First And Last Name" />
+                            <!-- Validation feedback for when the input is valid -->
+                            <div class="valid-feedback">
+                                Nice...!
+                            </div>
+                            <!-- Validation feedback for when the input is invalid -->
+                            <div class="invalid-feedback">
+                                Please submit a valid full name.
+                            </div>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="form-group col-10 col-sm-6 col-md-4 col-lg-12">
+                            <!-- Label for the Email Input -->
+                            <label for="objEmail" class="control-label">Email</label>
+                            <!-- Input element for Email with Bootstrap styles -->
+                            <input class="form-control userInput" type="email" id="objEmail"
+                                placeholder="Email address" />
+                            <!-- Validation feedback for when the input is valid -->
+                            <div class="valid-feedback">
+                                Now that's an email address
+                            </div>
+                            <!-- Validation feedback for when the input is invalid -->
+                            <div class="invalid-feedback">
+                                Please submit a valid email.
+                            </div>
+                        </div>
+
+                        <!-- Courses Selection Dropdown -->
+                        <div class="col-10 col-sm-6 col-md-4 col-lg-12" id="courses-selection">
+                            <!-- Select element for Courses with Bootstrap styles -->
+                            <select class="form-control userInput" id="objCourse">
+                                <option value="" disabled selected>Courses...</option>
+                                <option>C#</option>
+                                <option>JS</option>
+                                <option>JAVA</option>
+                                <option>Paython</option>
+                                <option>C++</option>
+                            </select>
+                            <!-- Validation feedback for when the input is valid -->
+                            <div class="valid-feedback">
+                                Good course!
+                            </div>
+                            <!-- Validation feedback for when the input is invalid -->
+                            <div class="invalid-feedback">
+                                Please Choose a course.
+                            </div>
+                        </div>
+
+                        <!-- Grade Input -->
+                        <div class="form-group col-10 col-sm-6 col-md-4 col-lg-12">
+                            <!-- Input element for Grade with Bootstrap styles -->
+                            <input class="form-control userInput" type="number" placeholder="Grade" min="0" max="100"
+                                id="objGrade">
+                            <!-- Validation feedback for when the input is valid -->
+                            <div class="valid-feedback">
+                                Looks Ok!
+                            </div>
+                            <!-- Validation feedback for when the input is invalid -->
+                            <div class="invalid-feedback">
+                                Please Choose a grade.
+                            </div>
+                        </div>
+
+                        <!-- Active Checkbox -->
+                        <div class="form-check">
+                            <!-- form-check: This class is used for aligning check boxes or radio buttons with their labels correctly. -->
+                            <!-- Label for the Active Checkbox -->
+                            <label class="form-check-label" for="isActive">
+                                Active?
+                            </label>
+                            <!-- Input element for the Active Checkbox with Bootstrap styles -->
+                            <input class="form-check-input userInput" type="checkbox" value="" id="isActive">
+                            <!-- Validation feedback for when the input is valid -->
+                            <div class="valid-feedback">
+                                Checked!
+                            </div>
+                            <!-- Validation feedback for when the input is invalid -->
+                            <div class="invalid-feedback">
+                                Please Check the box.
+                            </div>
+                        </div>
+
+                        <!-- Date Input -->
+                        <div class="form-group col-10  col-10 col-sm-6 col-md-4 col-lg-12" id="inputDate">
+                            <!-- Input element for Date with Bootstrap styles -->
+                            <input class="form-control userInput" type="datetime-local" id="datetime-input">
+                            <!-- Validation feedback for when the input is valid -->
+                            <div class="valid-feedback">
+                                Great!
+                            </div>
+                            <!-- Validation feedback for when the input is invalid -->
+                            <div class="invalid-feedback">
+                                Please Choose a date.
+                            </div>
+                        </div>
+                        <!--offset-lg-1, offset-md-2: These classes are used to move columns to the right.
+                            For example, offset-lg-1 will move the column to the right by the width of 1 column on large screens.-->
+                        <!-- Submit Button -->
+                        <div class="col-10 col-sm-6 col-md-4 offset-md-4 col-lg-12 offset-lg-0">
+                            <!-- Submit button with custom style -->
+                            <button type="submit" class="mybtn my-btn-start" id="btnSubmit">Submit</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <!-- Second Column: Table to Display Data -->
+            <div class="col-lg-4 col-md-4 offset-lg-1 offset-md-2" id="objDataTableDiv"></div>
+        </div>
+    </div>
+</body>
+
+</html>

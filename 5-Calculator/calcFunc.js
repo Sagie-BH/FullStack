@@ -118,6 +118,8 @@ function calculator() {
 let calcInstance = null;
 document.addEventListener('DOMContentLoaded', () => {
     calcInstance = calculator();
+    calcInstance2 = calculator();
+
     calcInstance.Init();
 });
 
