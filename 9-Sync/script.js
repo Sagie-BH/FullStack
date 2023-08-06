@@ -55,4 +55,3 @@ function simulateAsyncOperation(callback) {
   
   displayMessage('After async operation callback');
   
-  
