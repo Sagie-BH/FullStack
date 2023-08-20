@@ -1,0 +1,98 @@
+.recipeCard {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipeImg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.recipeLabel {
+  font-size: 1.5rem;
+}
+
+.recipe-source {
+  margin: 8px 0;
+}
+
+.recipeUrl {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.recipeIngredients {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Base button styles */
+.button {
+display: inline-block;
+padding: 12px 24px;
+font-size: 16px;
+font-weight: 600;
+text-align: center;
+text-decoration: none;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.3s ease;
+outline: none;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.button:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Active (pressed) effect */
+.button:active {
+transform: translateY(1px);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inputContainer {
+display: flex;
+flex-direction: column;
+gap: 20px;
+margin: 20px 0;
+}
+/* Base input styles */
+.input {
+padding: 10px 16px;
+font-size: 16px;
+border-radius: 4px;
+outline: none;
+transition: all 0.3s ease;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+width: 90%;
+background-color: #ffffff;
+color: #333;
+}
+
+/* Focus effect */
+.input:focus {
+box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(57, 156, 248, 0.3);
+}
+
+/* Placeholder style */
+.input::placeholder {
+color: #888;
+}
+
+.details {
+font-size: 14px;
+}

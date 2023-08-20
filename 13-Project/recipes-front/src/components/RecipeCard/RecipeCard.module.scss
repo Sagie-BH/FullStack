@@ -1,0 +1,33 @@
+.recipeCard {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .recipeImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .recipeLabel {
+    font-size: 1.5rem;
+  }
+  
+  .recipeUrl {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .recipeIngredients {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
