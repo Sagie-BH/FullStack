@@ -12,13 +12,13 @@ const RecipeCard = ({ recipe }) => {
   const handleReviewSubmit = async () => {
     try {
       if (review.trim() === ""){
-        console.log('No review added')
+        console.log('No review added');
         return;
       } 
-      const response = await axios.post(`'
+      const response = await axios.post(`
       http://localhost:3300/recipes/reviews/${recipe.label}`, { review });
 
-      setReviews(...reviews, response.data.review);
+      setReviews(response.data);
       setReview('');
 
     } catch(err) {
@@ -66,7 +66,7 @@ const RecipeCard = ({ recipe }) => {
           <h4>Reviews:</h4>
           <ul>
             {reviews.map((reviewObj, index) => (
-              <li key={index}>{reviewObj.review}</li>
+              <li key={index}>{reviewObj}</li>
             ))}
           </ul>
         </div>
