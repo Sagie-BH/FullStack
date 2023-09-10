@@ -1,33 +1,14 @@
-/*
-    Purpose: Defines routes related to recipes, including fetching recipes based on ingredients and managing reviews.
-    Functionality:
 
-    Uses express for routing.
-    Uses axios to make HTTP requests to the Edamam API.
-    Uses fs for file system operations (reading and writing recipes to a JSON file).
-    Uses path to construct the path to the recipes JSON file.
-    Defines a GET route to fetch recipes based on an ingredient.
-    Defines a POST route to add reviews to a specific recipe.
- */
     const express = require('express');
     const axios = require('axios');
     const fs = require('fs');
     const path = require('path');
-    
-    // Construct the path to the recipes JSON file.
-    // `__dirname` is a Node.js global variable that returns the directory path of the currently executing script.
     const recipesFilePath = path.join(__dirname, 'recipes.json');
     
-    // Edamam API credentials.
-    const appId = '29c38e73';
-    const appKey = 'd39ac38d6045736379b1e3f28762cbff';
+    const appId = process.env.APP_ID;
+    const appKey = process.env.APP_KEY;
     
-    // `router` is an instance of Express's `Router` class. 
-    // It allows modularization of route handlers,
-    // enabling cleaner and more organized code.
-    // With `router`, you can define multiple routes and then
-    // mount them on the main application using a single middleware.
-    const router = express.Router();
+    const recipesRouter = express.Router();
     
     // Helper function to find a recipe by its label.
     const findRecipeByLabel = (label, recipes) => {
@@ -35,22 +16,12 @@
     }
     
     // GET route to fetch recipes based on an ingredient.
-    router.get('/recipes/:ingredient', async (req, res) => {
+    recipesRouter.get('/:ingredient', async (req, res) => {
         const ingredient = req.params.ingredient;
         try {
             // Fetch recipes from the Edamam API based on the ingredient.
             const response = await axios.get(`https://api.edamam.com/search?q=${ingredient}&app_id=${appId}&app_key=${appKey}`);
-            
-            /* Extract relevant details from the API response.
-            Filtering the data to only what the frontend needs:
 
-                1. Performance: Reducing the amount of data transferred
-                    can lead to faster load times and a more responsive user experience.
-                2. Security: Minimizing the exposure of data 
-                    can prevent potential data leaks or unintended sharing of sensitive information.
-                3. Simplicity: Sending only necessary data makes frontend
-                    processing simpler and reduces the potential for errors or bugs.
-             */
             const recipes = response.data.hits.map(hit => ({
                 label: hit.recipe.label,
                 image: hit.recipe.image,
@@ -86,7 +57,7 @@
     });
     
     // POST route to add reviews to a specific recipe.
-    router.post('/recipes/reviews/:label', (req, res) => {
+    recipesRouter.post('/reviews/:label', (req, res) => {
         const name = req.params.label;
         const { review } = req.body;
     
@@ -116,5 +87,5 @@
         }
     })
     
-    module.exports = router;
+    module.exports = recipesRouter;
     
